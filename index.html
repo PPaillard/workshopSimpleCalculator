@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Workshop JS - Simple calculator</title>
+</head>
+<body>
+   <script>
+      // on récupère ce que l'utilisateur nous donne dans la fonction prompt
+      // le resultat est passé grace au return à la fonction parseInt
+      // le retour de la fonction parseInt est assigné à la variable firstValue
+      let firstValue = parseInt(prompt("Inserez le premier nombre : "));
+      let operator = prompt("Inserez l'opérateur': ");
+      let secondValue = parseInt(prompt("Inserez le second nombre : "));
+
+      function calculate(firstNumber, symbol, secondNumber){
+         switch (symbol) {
+            case "+":
+               return firstNumber + secondNumber;
+               break;
+            case "-":
+               return firstNumber - secondNumber;
+               break;
+            case "*":
+               return firstNumber * secondNumber;
+               break;
+            case "/":
+               return firstNumber / secondNumber;
+               break;
+            default:
+               return "Opérateur invalide";
+               break;
+         }
+      }
+
+      console.log("Résultat du calcul : ",calculate(firstValue, operator, secondValue));
+
+   </script>
+   
+</body>
+</html>
